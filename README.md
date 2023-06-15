@@ -46,15 +46,19 @@ python app.py
 
 ## Usage
 1. Enter the prompt by typing and press enter to get response from bot.
+
 ![App Screenshot](https://github.com/sarnav38/RePaLk/blob/main/assests/prompt%20enter.gif)
 
 2. Enter the voice prompt by click on mic button and pressed till command shown on the output window.
+
 ![App Screenshot](https://github.com/sarnav38/RePaLk/blob/main/assests/listen%20prompt.gif)
 
 3. Save the respone by clicking on it and then click button save as a file to save response.
 
 4. Press Clear button to Clear output window.
+
 ![App Screenshot](https://github.com/sarnav38/RePaLk/blob/main/assests/clear.gif)
+
 ## Prompt Examples
 
 1. ```open google.com``` command to open google.com
@@ -69,9 +73,9 @@ see config.json file for other website to be be open by ```open websitename``` c
 4. ```open crick``` to open [T20 IPL Predition ML model](https://cricpred.streamlit.app).
 
 5. ``` today date ``` 
+
 ![App Screenshot](https://github.com/sarnav38/RePaLk/blob/main/assests/dateCommand.gif)
 
 ## Author
 
 - [Arnav Sharma](https://www.github.com/sarnav38)
-
