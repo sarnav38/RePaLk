@@ -29,7 +29,7 @@ pip install -r requirements.txt
 ./myvenv/Script/activate
 python app.py
 ```    
-![App Screenshot](https://via.placeholder.com/400x50?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/sarnav38/RePaLk/blob/main/assests/run_app.PNG)
 
 5. You're done and let's chat and talk with your RePaLK.
 
