@@ -1,0 +1,23 @@
+{
+  "api_key": "2fadd62ff8c94876989cbef5b7bc85da",
+  "ssid": "WggiIjH_Q7oFT8vx4E4DgGtJo3ua2XVJN3V-Kir7YeNCOnyokqcCJw9772geB2-oStRapA.",
+  "software":
+          [["pycharm", "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2022.1.3\\bin\\pycharm64.exe"],
+                ["code", "C:\\Users\\Arnav\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"],
+                ["putty", "C:\\Program Files\\PuTTY\\putty.exe"],
+                ["filezilla", "C:\\Program Files\\FileZilla FTP Client\\filezilla.exe"],
+                ["git", "C:\\Program Files\\Git\\git-bash.exe"],
+                ["xampp", "C:\\xampp\\xampp-control.exe"]
+                ],
+  "browser": ["chrome", "C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe"],
+
+  "sites": [["youtube", "https://www.youtube.com"], ["google", "https://www.google.com"],
+             ["facebook", "https://www.facebook.com"], ["twitter", "https://www.twitter.com"],
+             ["instagram", "https://www.instagram.com"], ["amazon", "https://www.amazon.com"],
+             ["linkedin", "https://www.linkedin.com"], ["microsoft", "https://www.microsoft.com"],
+             ["quora", "https://www.quora.com"], ["github", "https://github.com"],
+             ["chat analyser", "https://whatsapchatanz.streamlit.app/"],
+             ["crick", "https://cricpred.streamlit.app/"]
+             ]
+}
+
