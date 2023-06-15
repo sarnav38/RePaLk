@@ -39,39 +39,37 @@ python app.py
 2. F12 for console
 3.  Session: Application → Cookies → Copy the value of __Secure-1PSID cookie and paste in config.json file.
 
-![App Screenshot](https://via.placeholder.com/400x50?text=App+Screenshot+Here)
-
 ## Authentication NewsAPi
 **Warning** Do not expose the ```api_key```
 1. visit and login in to https://newsapi.org/
 2. Click on APi key button and copy api key in paste in config.json file.
 
 ## Usage
-
 1. Enter the prompt by typing and press enter to get response from bot.
-![App Screenshot](https://via.placeholder.com/400x50?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/sarnav38/RePaLk/blob/main/assests/prompt%20enter.gif)
 
 2. Enter the voice prompt by click on mic button and pressed till command shown on the output window.
-![App Screenshot](https://via.placeholder.com/400x50?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/sarnav38/RePaLk/blob/main/assests/listen%20prompt.gif)
 
 3. Save the respone by clicking on it and then click button save as a file to save response.
 
 4. Press Clear button to Clear output window.
-![App Screenshot](https://via.placeholder.com/400x50?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/sarnav38/RePaLk/blob/main/assests/clear.gif)
 ## Prompt Examples
 
-1. ```open google.com``` command to open google.com.
+1. ```open google.com``` command to open google.com
 see config.json file for other website to be be open by ```open websitename``` command.
 
 2. Generate code 
 
-![App Screenshot](https://via.placeholder.com/400x50?text=App+Screenshot+Here)
+![App Screenshot](https://github.com/sarnav38/RePaLk/blob/main/assests/code.gif)
 
-3. ```open chat analyser``` to open whatsapp chat anaylyser ML model.
-url: https://whatsapchatanz.streamlit.app/
+3. ```open chat analyser``` to open [whatsapp chat anaylyser ML model](https://whatsapchatanz.streamlit.app).
 
-4. ```open crick``` to open T20 IPL Predition ML model.
-url: https://cricpred.streamlit.app/
+4. ```open crick``` to open [T20 IPL Predition ML model](https://cricpred.streamlit.app).
+
+5. ``` today date ``` 
+![App Screenshot](https://github.com/sarnav38/RePaLk/blob/main/assests/dateCommand.gif)
 
 ## Author
 
