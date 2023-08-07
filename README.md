@@ -37,7 +37,7 @@ python app.py
 >  **Warning** Do not expose the ```__Secure-1PSID```
 1. open Edge browser Visit https://bard.google.com/
 2. F12 for console
-3.  Session: Application → Cookies → Copy the value of __Secure-1PSID cookie and paste in config.json[https://github.com/sarnav38/RePaLk/blob/main/config.json] file.
+3.  Session: Application → Cookies → Copy the value of __Secure-1PSID cookie and paste in [config.json](https://github.com/sarnav38/RePaLk/blob/main/config.json) file.
 
 ## Authentication NewsAPi
 **Warning** Do not expose the ```api_key```
