@@ -42,7 +42,13 @@ LangChain
 
 ```bash
 python -m venv myvenv
-./myvenv/Script/activate [for windows]
+```
+```for Windows```
+```bash
+./myvenv/Script/activate
+```
+``` for linux```
+```bash
 source myvenv/bin/activate [for linux]
 ``` 
 
@@ -64,19 +70,11 @@ python app.py
 
 5. You're done and let's chat and talk with your RePaLK.
 
-<<<<<<< HEAD
-## Authentication Bard
->  **Warning** Do not expose the ```__Secure-1PSID```
-1. open Edge browser Visit https://bard.google.com/
-2. F12 for console
-3.  Session: Application → Cookies → Copy the value of __Secure-1PSID cookie and paste in [config.json](https://github.com/sarnav38/RePaLk/blob/main/config.json) file.
-=======
 ## Authentication OpenAI
 >  **Warning** Do not expose the ```api_key```
 1. open Edge browser Visit https://platform.openai.com/
 2. Login with your Account. Once you log in you will be taken to the Profile page.
 3. Goto Personal --> View API keys --> create new secret key. Copy and paste in .env file.
->>>>>>> 5df5b8f (own data interation feature added)
 
 ## Authentication NewsAPi
 **Warning** Do not expose the ```api_key```
