@@ -47,9 +47,3 @@ def query(vectorDb, prompt_chain, txt_file: bool, q: str):
         mySpeak("Searching prompt")
         mySpeak("According to ChatBot")
         return res, doc_page
-
-# if __name__ == '__main__':
-#     ch, c, p = queryData('C:\\Users\\arnav\\Desktop\\OS_Full_Notes.pdf')
-#     res, page = query(ch, c, p, 'how many windows in app')
-#     print(res)
-#     print(page)
