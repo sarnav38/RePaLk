@@ -1,11 +1,8 @@
-import requests
-import json
+import requests, os
+from dotenv import load_dotenv, find_dotenv
 
-try:
-    with open('config.json', 'r', encoding='utf-8') as f:
-        api_key = json.load(f)['api_key']
-except Exception:
-    api_pro = 'enter api key in config.json file or config.json file not exsit'
+_ = load_dotenv(find_dotenv())
+api_key = os.environ['NEWS_API_KEY']
 
 def topNews(api_key: str = api_key, country: str = 'in') -> list:
     res = requests.get(f'https://newsapi.org/v2/top-headlines?country={country}&apiKey={api_key}').json()

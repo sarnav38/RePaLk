@@ -2,15 +2,12 @@
 <ui version="4.0">
  <class>Dialog</class>
  <widget class="QDialog" name="Dialog">
-  <property name="windowModality">
-   <enum>Qt::NonModal</enum>
-  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>807</width>
-    <height>586</height>
+    <width>800</width>
+    <height>614</height>
    </rect>
   </property>
   <property name="font">
@@ -44,9 +41,9 @@
   </property>
   <property name="styleSheet">
    <string notr="true">QDialog{background-color:qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(35, 40, 3, 255), stop:0.16 rgba(136, 106, 22, 255), stop:0.225 rgba(166, 140, 41, 255), stop:0.285 rgba(204, 181, 74, 255), stop:0.345 rgba(235, 219, 102, 255), stop:0.415 rgba(245, 236, 112, 255), stop:0.52 rgba(209, 190, 76, 255), stop:0.57 rgba(187, 156, 51, 255), stop:0.635 rgba(168, 142, 42, 255), stop:0.695 rgba(202, 174, 68, 255), stop:0.75 rgba(218, 202, 86, 255), stop:0.815 rgba(208, 187, 73, 255), stop:0.88 rgba(187, 156, 51, 255), stop:0.935 rgba(137, 108, 26, 255), stop:1 rgba(35, 40, 3, 255));
-border: 2px solid rgb(115, 115, 115);
-color:black;
-}
+border: 1.5px solid rgb(111, 111, 0);
+color:black;}
+
 QDialog:focus{
 border: 3px solid rgb(208, 0, 104);
 }</string>
@@ -55,7 +52,7 @@ border: 3px solid rgb(208, 0, 104);
    <property name="geometry">
     <rect>
      <x>510</x>
-     <y>520</y>
+     <y>545</y>
      <width>60</width>
      <height>40</height>
     </rect>
@@ -97,7 +94,7 @@ QPushButton:hover{
 background-color: rgb(208, 0, 104);
 }
 QPushButton:focus{
-border: 3px solid rgb(208, 0, 104);
+border: 3px solid rgb(129, 0, 97);
 }
 
 </string>
@@ -129,9 +126,9 @@ border: 3px solid rgb(208, 0, 104);
    <property name="geometry">
     <rect>
      <x>80</x>
-     <y>500</y>
+     <y>535</y>
      <width>420</width>
-     <height>75</height>
+     <height>60</height>
     </rect>
    </property>
    <property name="font">
@@ -143,23 +140,17 @@ border: 3px solid rgb(208, 0, 104);
      <bold>false</bold>
     </font>
    </property>
-   <property name="focusPolicy">
-    <enum>Qt::StrongFocus</enum>
-   </property>
    <property name="contextMenuPolicy">
     <enum>Qt::DefaultContextMenu</enum>
-   </property>
-   <property name="acceptDrops">
-    <bool>false</bool>
    </property>
    <property name="toolTip">
     <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prompt Input Widget&lt;/span&gt;: Enter input to get response&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Prompt Input Widget: &lt;/span&gt;Enter input to get response&lt;/p&gt;
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;When Focus On&lt;/span&gt;: Type query and press &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctrl + enter&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt; &lt;/span&gt;to send HTTP Request&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;When Focus On&lt;/span&gt;:&lt;span style=&quot; font-weight:600;&quot;&gt; Long Press&lt;/span&gt;  &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctrl + Space&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt; &lt;/span&gt;for Voice query &lt;span style=&quot; font-weight:600;&quot;&gt;until it say Reconizing Cmd or Screen become blur&lt;/span&gt; and Release to send HTTP Request&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;When Focus On: &lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Long Press&lt;/span&gt;  &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctrl + Space&lt;/span&gt;&lt;span style=&quot; font-weight:600;&quot;&gt; &lt;/span&gt;for Voice query &lt;span style=&quot; font-weight:600;&quot;&gt;until it say Reconizing Cmd or Screen become blur&lt;/span&gt; and Release to send HTTP Request&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="autoFillBackground">
     <bool>false</bool>
@@ -202,9 +193,9 @@ p, li { white-space: pre-wrap; }
    <property name="geometry">
     <rect>
      <x>20</x>
-     <y>10</y>
+     <y>65</y>
      <width>760</width>
-     <height>480</height>
+     <height>450</height>
     </rect>
    </property>
    <property name="sizePolicy">
@@ -248,13 +239,12 @@ border-radius: 7px;
 color:rgb(20, 61, 89);
 font: 12pt &quot;Arial Rounded MT Bold&quot;;
 }
-
-QWidget:focus{
-border: 3px solid rgb(208, 0, 104);
+QListWidget:focus{
+border: 3px solid rgb(129, 0, 97);
 }
 
 QListWidget::item:focus{
-border: 3px solid rgb(0, 0, 255);
+border: 3px solid rgb(0,0,255)
 }</string>
    </property>
    <property name="verticalScrollBarPolicy">
@@ -304,7 +294,7 @@ border: 3px solid rgb(0, 0, 255);
    <property name="geometry">
     <rect>
      <x>580</x>
-     <y>520</y>
+     <y>545</y>
      <width>60</width>
      <height>40</height>
     </rect>
@@ -322,12 +312,12 @@ border: 3px solid rgb(0, 0, 255);
     <enum>Qt::NoContextMenu</enum>
    </property>
    <property name="toolTip">
-    <string extracomment="'Save to a file'">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:2px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Select one output item at a time and click to save into a file&lt;/p&gt;
-&lt;p style=&quot; margin-top:2px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut key&lt;/span&gt;: &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctlr+S&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </string>
+&lt;p style=&quot; margin-top:2px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut key&lt;/span&gt;: &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctrl+S&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="statusTip">
     <string extracomment="save to a file"/>
@@ -342,8 +332,9 @@ background-color: rgb(208, 0, 104);
 }
 
 QPushButton:focus{
-border: 3px solid rgb(208, 0, 104);
+border: 3px solid rgb(129, 0, 97);
 }
+
 </string>
    </property>
    <property name="text">
@@ -367,7 +358,7 @@ border: 3px solid rgb(208, 0, 104);
    <property name="geometry">
     <rect>
      <x>650</x>
-     <y>520</y>
+     <y>545</y>
      <width>60</width>
      <height>40</height>
     </rect>
@@ -384,7 +375,7 @@ border: 3px solid rgb(208, 0, 104);
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
 &lt;p style=&quot; margin-top:12px; margin-bottom:2px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Press until Voice command show in Output Window&lt;/p&gt;
-&lt;p style=&quot; margin-top:2px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut key&lt;/span&gt;: &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctrl+Space&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </string>
+&lt;p style=&quot; margin-top:2px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut key&lt;/span&gt;: &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctrl+Space&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="toolTipDuration">
     <number>-1</number>
@@ -403,9 +394,8 @@ QPushButton:hover
 {background-color: rgb(208, 0, 104);}
 
 QPushButton:focus{
-border: 3px solid rgb(208, 0, 104);
-}
-</string>
+border: 3px solid rgb(129, 0, 97);
+}</string>
    </property>
    <property name="text">
     <string/>
@@ -428,7 +418,7 @@ border: 3px solid rgb(208, 0, 104);
    <property name="geometry">
     <rect>
      <x>720</x>
-     <y>520</y>
+     <y>545</y>
      <width>60</width>
      <height>40</height>
     </rect>
@@ -452,8 +442,8 @@ border: 3px solid rgb(208, 0, 104);
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:2px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Press until Voice command show in Output Window&lt;/p&gt;
-&lt;p style=&quot; margin-top:2px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut key&lt;/span&gt;: &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctrl+C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt; </string>
+&lt;p style=&quot; margin-top:12px; margin-bottom:2px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Press to clear output window&lt;/p&gt;
+&lt;p style=&quot; margin-top:2px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut key&lt;/span&gt;: &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctrl+C&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
    <property name="toolTipDuration">
     <number>-1</number>
@@ -472,9 +462,8 @@ QPushButton:hover
 {background-color: rgb(208, 0, 104);}
 
 QPushButton:focus{
-border: 3px solid rgb(208, 0, 104);
-}
-</string>
+border: 3px solid rgb(129, 0, 97);
+}</string>
    </property>
    <property name="text">
     <string>Clear</string>
@@ -489,20 +478,21 @@ border: 3px solid rgb(208, 0, 104);
     <string>Ctrl+C</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushData">
+  <widget class="QPushButton" name="pushBack">
    <property name="geometry">
     <rect>
      <x>10</x>
-     <y>520</y>
+     <y>15</y>
      <width>60</width>
      <height>40</height>
     </rect>
    </property>
-   <property name="sizePolicy">
-    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-     <horstretch>0</horstretch>
-     <verstretch>0</verstretch>
-    </sizepolicy>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
    </property>
    <property name="focusPolicy">
     <enum>Qt::NoFocus</enum>
@@ -511,36 +501,43 @@ border: 3px solid rgb(208, 0, 104);
     <enum>Qt::NoContextMenu</enum>
    </property>
    <property name="toolTip">
-    <string extracomment="'Save to a file'">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:12px; margin-bottom:2px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Press to Goto Data Chat Window&lt;/p&gt;
-&lt;p style=&quot; margin-top:2px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut key&lt;/span&gt;: &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctlr+F&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:12px; margin-bottom:2px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Press to Go back to Main Window&lt;/p&gt;
+&lt;p style=&quot; margin-top:2px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut key: &lt;/span&gt;: &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctlr+B&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="toolTipDuration">
+    <number>-1</number>
    </property>
    <property name="statusTip">
-    <string extracomment="save to a file"/>
+    <string/>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
    </property>
    <property name="styleSheet">
     <string notr="true">QPushButton{
 background-color:rgb(244, 255, 147);
+padding:5px;
 border: 2px solid rgb(115, 115, 115);
 }
 QPushButton:hover{
 background-color: rgb(208, 0, 104);
 }
-QPushButton:focus{
-border: 3px solid rgb(208, 0, 104);
-}
 
+QPushButton:focus{
+border: 3px solid rgb(129, 0, 97);
+}
 </string>
    </property>
    <property name="text">
-    <string/>
+    <string notr="true"/>
    </property>
    <property name="icon">
     <iconset>
-     <normaloff>../icons/data Chat window.png</normaloff>../icons/data Chat window.png</iconset>
+     <normaloff>../icons/back.png</normaloff>../icons/back.png</iconset>
    </property>
    <property name="iconSize">
     <size>
@@ -549,10 +546,132 @@ border: 3px solid rgb(208, 0, 104);
     </size>
    </property>
    <property name="shortcut">
-    <string>Ctrl+F</string>
+    <string>Ctrl+B</string>
+   </property>
+   <property name="autoDefault">
+    <bool>true</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>10</y>
+     <width>700</width>
+     <height>50</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Arial Black</family>
+     <pointsize>10</pointsize>
+     <weight>10</weight>
+     <italic>false</italic>
+     <bold>false</bold>
+    </font>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QLabel{
+	background-color:qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.0568182 rgba(172, 242, 231, 255), stop:0.869318 rgba(255, 215, 215, 255));
+border: 2px solid rgb(115, 115, 115);
+border-radius:10px;
+font: 87 10pt &quot;Arial Black&quot;;
+padding: 4px;
+}</string>
+   </property>
+   <property name="text">
+    <string>FineName Upload. Now Chat withyour uploaded Data</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+   <property name="wordWrap">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pushUpload">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>545</y>
+     <width>60</width>
+     <height>40</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>13</pointsize>
+     <weight>75</weight>
+     <bold>true</bold>
+    </font>
+   </property>
+   <property name="focusPolicy">
+    <enum>Qt::NoFocus</enum>
+   </property>
+   <property name="contextMenuPolicy">
+    <enum>Qt::NoContextMenu</enum>
+   </property>
+   <property name="toolTip">
+    <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p style=&quot; margin-top:12px; margin-bottom:2px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Press to upload file&lt;/p&gt;
+&lt;p style=&quot; margin-top:2px; margin-bottom:12px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Shortcut key&lt;/span&gt;: &lt;span style=&quot; font-size:10pt; font-weight:600; color:#ff007f;&quot;&gt;Ctlr+U&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+   </property>
+   <property name="toolTipDuration">
+    <number>-1</number>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton{
+background-color:rgb(244, 255, 147);
+padding:5px;
+border: 2px solid rgb(115, 115, 115);
+}
+QPushButton:hover{
+background-color: rgb(208, 0, 104);
+}
+QPushButton:focus{
+border: 3px solid rgb(129, 0, 97);
+}
+
+</string>
+   </property>
+   <property name="text">
+    <string notr="true"/>
+   </property>
+   <property name="icon">
+    <iconset>
+     <normaloff>../icons/pushData.png</normaloff>../icons/pushData.png</iconset>
+   </property>
+   <property name="iconSize">
+    <size>
+     <width>52</width>
+     <height>50</height>
+    </size>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+U</string>
+   </property>
+   <property name="autoDefault">
+    <bool>true</bool>
+   </property>
+   <property name="default">
+    <bool>false</bool>
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="../icons/enter.qrc"/>
+ </resources>
  <connections/>
 </ui>

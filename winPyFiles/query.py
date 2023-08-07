@@ -1,9 +1,20 @@
 import datetime, json, wikipedia, webbrowser, os, pyttsx4
 from winPyFiles.location import getIpLoc, getLogLat
-from bardapi import Bard
+# from bardapi import Bard
 from winPyFiles.newTop5 import topNews
 import speech_recognition as sr
+import openai
+from dotenv import load_dotenv, find_dotenv
 
+_ = load_dotenv(find_dotenv())
+
+openai.api_key = os.environ['OPENAI_API_KEY']
+
+# token = os.environ['SSID']
+
+def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0):
+    response = openai.ChatCompletion.create(model=model, messages=messages, temperature=temperature)
+    return response.choices[0].message["content"]
 
 def mySpeak(audio: str) -> None:
     """It will Speak whatsoever string you pass to it"""
@@ -14,6 +25,7 @@ def mySpeak(audio: str) -> None:
     engine.setProperty('rate', rate - 20)
     engine.say(audio)
     engine.runAndWait()
+
 
 def takeCommand() -> str:
     """It will take microphone input and return string output"""
@@ -32,25 +44,11 @@ def takeCommand() -> str:
         mySpeak(' mySpeak again as command not recognizing')
         return ""
 
-
 def returnQuery(query: str) -> str:
-    try:
-        with open('config.json', 'r', encoding='utf-8') as f:
-            token = json.load(f)['ssid']
-    except Exception:
-        noSSID = 'No SSID in config.json file or config.json file not exsit'
-        mySpeak(noSSID)
-        return noSSID
-
-    if len(token) < 1:
-        noSSID = 'Wrong SSID entered. Return to google bard page and check SSID'
-        mySpeak(noSSID)
-        return noSSID
 
     try:
         with open('config.json', 'r', encoding='utf-8') as f:
             software = json.load(f)['software']
-
     except Exception:
         nosoft = 'No software data in config.json file or config.json file not exsit'
         mySpeak(nosoft)
@@ -75,7 +73,6 @@ def returnQuery(query: str) -> str:
         mySpeak(sidta)
         return sidta
 
-
     # TODO sites opening
     try:
         for site in sites:
@@ -99,7 +96,6 @@ def returnQuery(query: str) -> str:
         sofr = 'enter software and its path as per your pc '
         mySpeak(sofr)
         return sofr
-
 
     # TODO exit app
     if 'exit' in query:
@@ -168,11 +164,20 @@ def returnQuery(query: str) -> str:
     # TODO bard
     else:
         try:
-            bard = Bard(token=token)
+            messages = [
+                {'role': 'system',
+                 'content': 'You are a polite Ai assistant '},
+                {'role': 'user',
+                 'content': f'{query}'},
+            ]
+            # bard = Bard(token=token)
+            # res = bard.get_answer(query)['content']
             mySpeak("Searching prompt")
-            res = bard.get_answer(query)['content']
             mySpeak("According to ChatBot")
+            res = get_completion_from_messages(messages)
             return res
         except Exception:
-            mySpeak('Wrong SSID entered. Return to Welcome page and enter ssid again')
-            return 'Wrong SSID entered. Return to Welcome page and enter ssid again'
+            mySpeak('Wrong API Key entered or Check Internet connection.')
+            return 'Wrong API Key entered or Check Internet connection.'
+
+

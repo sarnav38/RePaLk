@@ -1,6 +1,4 @@
 {
-  "api_key": "Enter news api_ key here",
-  "ssid": "Enter ssid there",
   "software":
           [["pycharm", "C:\\Program Files\\JetBrains\\PyCharm Community Edition 2022.1.3\\bin\\pycharm64.exe"],
                 ["code", "C:\\Users\\Arnav\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"],
