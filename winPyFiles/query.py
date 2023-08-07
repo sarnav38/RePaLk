@@ -1,6 +1,5 @@
 import datetime, json, wikipedia, webbrowser, os, pyttsx4
 from winPyFiles.location import getIpLoc, getLogLat
-# from bardapi import Bard
 from winPyFiles.newTop5 import topNews
 import speech_recognition as sr
 import openai
@@ -9,8 +8,6 @@ from dotenv import load_dotenv, find_dotenv
 _ = load_dotenv(find_dotenv())
 
 openai.api_key = os.environ['OPENAI_API_KEY']
-
-# token = os.environ['SSID']
 
 def get_completion_from_messages(messages, model="gpt-3.5-turbo", temperature=0):
     response = openai.ChatCompletion.create(model=model, messages=messages, temperature=temperature)
@@ -25,7 +22,6 @@ def mySpeak(audio: str) -> None:
     engine.setProperty('rate', rate - 20)
     engine.say(audio)
     engine.runAndWait()
-
 
 def takeCommand() -> str:
     """It will take microphone input and return string output"""
@@ -170,8 +166,6 @@ def returnQuery(query: str) -> str:
                 {'role': 'user',
                  'content': f'{query}'},
             ]
-            # bard = Bard(token=token)
-            # res = bard.get_answer(query)['content']
             mySpeak("Searching prompt")
             mySpeak("According to ChatBot")
             res = get_completion_from_messages(messages)
@@ -179,5 +173,3 @@ def returnQuery(query: str) -> str:
         except Exception:
             mySpeak('Wrong API Key entered or Check Internet connection.')
             return 'Wrong API Key entered or Check Internet connection.'
-
-
