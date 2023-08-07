@@ -41,7 +41,7 @@ def takeCommand() -> str:
         mySpeak("Recognizing command")
         return query
     except Exception:
-        mySpeak(' mySpeak again as command not recognizing')
+        mySpeak('Speak again as command not recognizing')
         return ""
 
 def returnQuery(query: str) -> str:

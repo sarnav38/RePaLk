@@ -2,7 +2,7 @@ from PyQt5.QtWidgets import QDialog, QPushButton, QTextEdit, QLabel
 from PyQt5.QtWidgets import QListWidget, QListWidgetItem, QFileDialog
 from PyQt5.uic import loadUi
 from PyQt5.QtCore import Qt
-from winPyFiles.query import returnQuery, mySpeak, takeCommand
+from winPyFiles.query import mySpeak, takeCommand
 from winPyFiles.ChatOwnData import queryData, query
 
 
@@ -14,6 +14,7 @@ class yourDataUI(QDialog):
         self.S_widgets = S_widgets
         self.chromeVs = None
         self.chain = None
+        self.txt_or_pdf = None
 
         self.ChatView = self.findChild(QListWidget, 'listWidget')
         self.ChatEnter = self.findChild(QTextEdit, 'textEdit')
@@ -43,7 +44,7 @@ class yourDataUI(QDialog):
         fltr = 'PDF files(*.pdf);;Text files (*.txt)'
         fileName, _ = QFileDialog.getOpenFileName(caption='Open File', filter=fltr)
         self.S_widgets.setWindowTitle(f'RePaLK - {fileName.split(sep="/")[-1].capitalize()}')
-        self.chromeVs, self.chain = queryData(fileName)
+        self.chromeVs, self.chain, self.txt_or_pdf = queryData(fileName)
         self.label.setText(
             f'{fileName.split(sep="/")[-1].capitalize()} uploaded. Now Chat with your uploaded file Data.')
         mySpeak(f'{fileName.split(sep="/")[-1].capitalize()} uploaded. Now Chat with your uploaded file Data.')
@@ -67,8 +68,12 @@ class yourDataUI(QDialog):
         if self.chromeVs is not None:
             if self.ChatView.currentItem() is not None:
                 qur = str(self.ChatView.currentItem().text())
-                res, pageNumber = query(vectorDb=self.chromeVs, prompt_chain=self.chain, q=qur)
-                res = QListWidgetItem(f'Ai Response: {res} \nOn Page Number: {pageNumber}')
+                res, pageNumber = query(vectorDb=self.chromeVs, prompt_chain=self.chain,
+                                        txt_file=self.txt_or_pdf, q=qur)
+                if self.txt_or_pdf:
+                    res = QListWidgetItem(f'Ai Response: {res}')
+                else:
+                    res = QListWidgetItem(f'Ai Response: {res} \nOn Page Number: {pageNumber}')
                 self.ChatView.addItem(res)
                 self.ChatView.setCurrentItem(None)
             else:
@@ -96,8 +101,12 @@ class yourDataUI(QDialog):
             if self.ChatView.currentItem() is not None:
                 self.ChatEnter.setText('')
                 qur = str(self.ChatView.currentItem().text())
-                res, pageNumber = query(vectorDb=self.chromeVs, prompt_chain=self.chain, q=qur)
-                res = QListWidgetItem(f'Ai Response: {res} \nOn Page Number: {pageNumber}')
+                res, pageNumber = query(vectorDb=self.chromeVs, prompt_chain=self.chain,
+                                        txt_file=self.txt_or_pdf, q=qur)
+                if self.txt_or_pdf:
+                    res = QListWidgetItem(f'Ai Response: {res}')
+                else:
+                    res = QListWidgetItem(f'Ai Response: {res} \nOn Page Number: {pageNumber}')
                 self.ChatView.addItem(res)
                 self.ChatView.setCurrentItem(None)
             else:

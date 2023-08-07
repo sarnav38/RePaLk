@@ -17,9 +17,11 @@ def queryData(dataFile):
     if dataFile.endswith('.pdf'):
         loader = PyPDFLoader(dataFile)
         pages = loader.load()
+        txt_file = False
     else:
-        loader = loader = TextLoader(dataFile)
+        loader = TextLoader(dataFile)
         pages = loader.load()
+        txt_file = True
 
     text_spliter = RecursiveCharacterTextSplitter(separators=["\n\n", "\n", " ", ""], chunk_size=800,
                                                   chunk_overlap=200, length_function=len)
@@ -27,13 +29,27 @@ def queryData(dataFile):
     embeddings = OpenAIEmbeddings()
     chromeVs = Chroma.from_documents(text_doc, embeddings)
     chain = load_qa_chain(OpenAI(), chain_type='stuff')
-    return chromeVs, chain
+    return chromeVs, chain, txt_file
 
 
-def query(vectorDb, prompt_chain, q):
-    content = vectorDb.similarity_search(query=q, k=2)
-    doc_page = content[0].metadata['page'] + 1
-    res = prompt_chain.run(input_documents=content, question=q)
-    mySpeak("Searching prompt")
-    mySpeak("According to ChatBot")
-    return res, doc_page
+def query(vectorDb, prompt_chain, txt_file: bool, q: str):
+    if txt_file:
+        content = vectorDb.similarity_search(query=q, k=2)
+        doc_page = 'text file not contain Page Number'
+        res = prompt_chain.run(input_documents=content, question=q)
+        mySpeak("Searching prompt")
+        mySpeak("According to ChatBot")
+        return res, doc_page
+    else:
+        content = vectorDb.similarity_search(query=q, k=2)
+        doc_page = content[0].metadata['page'] + 1
+        res = prompt_chain.run(input_documents=content, question=q)
+        mySpeak("Searching prompt")
+        mySpeak("According to ChatBot")
+        return res, doc_page
+
+# if __name__ == '__main__':
+#     ch, c, p = queryData('C:\\Users\\arnav\\Desktop\\OS_Full_Notes.pdf')
+#     res, page = query(ch, c, p, 'how many windows in app')
+#     print(res)
+#     print(page)
